@@ -18,7 +18,7 @@ router.post("/add", (req,res) => {
         name: req.body.name,
         team: req.body.team,
         age : req.body.age
-    });
+    }).then(success => res.send(success));
 })
 
 
