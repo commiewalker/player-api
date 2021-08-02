@@ -22,7 +22,7 @@ router.post("/add", (req,res) => {
 })
 
 router.put("/update", (req,res) => {
-    db.update(
+    db.Player.update(
         {
             name: req.body.name,
             team: req.body.team,
