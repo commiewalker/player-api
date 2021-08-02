@@ -21,6 +21,19 @@ router.post("/add", (req,res) => {
     }).then(success => res.send(success));
 })
 
+router.put("/update", (req,res) => {
+    db.update(
+        {
+            name: req.body.name,
+            team: req.body.team,
+            age: req.body.age
+        },
+        {
+            where: { id: req.body.id }
+        }
+    ).then(() => res.send("success"));
+})
+
 
 
 router.get("/",(req,res) => {
